@@ -16,19 +16,22 @@ describe Mermaid do
 
   it 'has a name' do
     mermaid = Mermaid.new('Sereia')
-    # since we need to call the name attribute and get back the string that was passed in, we need an attribute reader for the name attribute
+    # since we need to call the name attribute and get back the string that was passed in,
+    # we need an attribute reader for the name attribute
     expect(mermaid.name).to eq 'Sereia'
   end
   
   it 'has an age' do
     mermaid = Mermaid.new('Sereia')
-    # since we need to call the age attribute and get back the interger that was passed in, we need an attribute reader for the age attribute
+    # it looks like the age method is set as age = 22, rather than being a method with an 
+    # argument that is passed in. age should be defined and set to 22
     expect(mermaid.age).to eq 22
   end
   
   it 'has can get older' do
     mermaid = Mermaid.new('Sereia')
-    # since we need to call the get_older method, we need to define the get_older method and call it on the age attribute
+    # since we need to call the get_older method, we need to define the get_older method 
+    # to be able to change the age to 23
     mermaid.get_older
     expect(mermaid.age).to eq 23
   end
